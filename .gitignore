@@ -1,0 +1,21 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+
+output/*.mp4
+output/temp/
+
+assets/backgrounds/*.mp4
+
+data/used_posts.json
+
+# YouTube OAuth client secrets and cached tokens
+credentials/
+output/*.json
+
+# Optional Reddit session cookie (see README)
+.env

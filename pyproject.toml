@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reddit-video-maker"
+version = "0.1.0"
+description = "Turn public Reddit posts into narrated, captioned 9:16 vertical videos."
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[project.scripts]
+reddit-video-maker = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "gui"]
+packages = ["src"]
+
+[tool.setuptools.dynamic]
+# requirements.txt is the single source of dependency versions
+dependencies = { file = ["requirements.txt"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
