@@ -271,3 +271,4 @@ The tests run fully offline: no Reddit, Edge TTS, Chromium, FFmpeg or YouTube is
 - The desktop app uses `os.startfile`, so **Check Video** works on Windows only.
 - `output/temp/title_card.png` is shared between posts. Posts are rendered one at a time, so this is safe, but do not run two instances at once.
 - Paths resolve from the project root, so use an editable install (`pip install -e .`) rather than a regular one.
+
